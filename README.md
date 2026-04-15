@@ -30,8 +30,35 @@
 
  Instalación
 
-### Ambiente de Desarrollo
+ Ambiente de Desarrollo
 1. Descarga e instala [Node.js](https://nodejs.org).
 2. Clona este repositorio:
    ```bash
    git clone https://github.com
+
+#Configuración del Ecosistema
+
+El sistema utiliza un módulo de configuración centralizado (`src/config.js`) que permite ajustar las reglas de negocio de Walmart sin alterar el core del algoritmo.
+
+### 1. Variables de Entorno (.env)
+Para proteger los datos sensibles del nodo Cuautitlán, el sistema busca las siguientes variables:
+- `YMS_API_URL`: URL del sistema de gestión de patios de Walmart.
+- `YMS_AUTH_TOKEN`: Token de seguridad para el consumo de APIs.
+- `DB_HOST`: Dirección del servidor de base de datos para el historial de rampas.
+
+### 2. Parámetros de Negocio
+Dentro de `src/config.js`, se pueden configurar los siguientes valores críticos:
+
+
+| Parámetro | Descripción | Valor Default |
+| :--- | :--- | :--- |
+| `TIEMPO_MAX_ESPERA` | Minutos permitidos antes de lanzar alerta crítica. | 120 min |
+| `PRIORIDAD_A` | Categoría de productos con pase inmediato. | `perecedero` |
+| `PRIORIDAD_B` | Categoría de productos bajo esquema FIFO. | `seco` |
+
+### 3. Configuración del CI/CD (GitHub Actions)
+La automatización visual se configura en `.github/workflows/main.yml`. Cada vez que se envía un **Pull Request** a la rama `develop`, el sistema:
+1. Levanta un entorno virtual de Node.js.
+2. Ejecuta `npm install`.
+3. Corre las pruebas de `test/asignacion.test.js`.
+4. Bloquea el **Merge** si las pruebas de prioridad fallan.
