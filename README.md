@@ -1,4 +1,4 @@
-#  Walmart YMS Optimizer - Nodo Cuautitlán
+  Walmart YMS Optimizer - Nodo Cuautitlán
 
 ##  Resumen Ejecutivo
 **Descripción:** Sistema inteligente para la gestión de flujo de transporte en el patio de maniobras del CEDIS Cuautitlán.  
@@ -7,17 +7,10 @@
 **Arquitectura:** Microservicios en Node.js, validación CI/CD con GitHub Actions y control de versiones mediante GitFlow.
 
 ---
-graph TD
-    A[YMS Walmart API] -->|Datos de Unidades| B(Módulo de Ingesta)
-    B --> C{Motor de Lógica}
-    C -->|Prioridad 1| D[Perecederos]
-    C -->|Prioridad 2| E[Carga Seca]
-    D --> F[Algoritmo de Asignación FIFO]
-    E --> F
-    F --> G[Dashboard de Supervisión]
-    F -->|Update| H[(Base de Datos PostgreSQL)]
+Arquitectura
+<img width="1087" height="687" alt="image" src="https://github.com/user-attachments/assets/8fba828a-0cb3-4a08-9ac0-fd73401b3cc8" />
 
-##  Tabla de Contenidos
+ Tabla de Contenidos
 1. [Requerimientos](#requerimientos)
 2. [Instalación](#instalación)
 3. [Configuración](#configuración)
@@ -27,7 +20,7 @@ graph TD
 
 ---
 
-##  Requerimientos
+ Requerimientos
 - **Servidor de Aplicación:** Node.js v18.x o superior.
 - **Entorno:** Linux/Windows/MacOS.
 - **Base de Datos:** PostgreSQL (Planeado para versión GA).
@@ -36,7 +29,7 @@ graph TD
 
 ---
 
-##  Instalación
+ Instalación
 
 ### Ambiente de Desarrollo
 1. Descarga e instala [Node.js](https://nodejs.org).
