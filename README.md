@@ -7,7 +7,6 @@
 **Arquitectura:** Microservicios en Node.js, validación CI/CD con GitHub Actions y control de versiones mediante GitFlow.
 
 ---
-Arquitectura
 <img width="1087" height="687" alt="image" src="https://github.com/user-attachments/assets/8fba828a-0cb3-4a08-9ac0-fd73401b3cc8" />
 
  Tabla de Contenidos
