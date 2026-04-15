@@ -75,29 +75,11 @@ node src/manual_uso.js
 
  Guía de Contribución
 
-Aceptamos contribuciones de la comunidad académica y de TI para mejorar el flujo logístico del CEDIS. Para colaborar, es obligatorio seguir este flujo de trabajo profesional:
+¡Gracias por tu interés en mejorar el motor de optimización de Walmart Cuautitlán! Para mantener la integridad del sistema y cumplir con los estándares de TI, sigue este flujo de trabajo:
 
- 1. Preparación del Entorno
-Clona el repositorio y sincroniza la rama de integración:
+ 1. Clonación del Repositorio
+Crea una copia local de la rama de desarrollo para trabajar en tus mejoras:
 ```bash
 git clone https://github.com
 cd walmart-yms-optimizer
 git checkout develop
-
- Roadmap (Requerimientos Futuros)
-
-El proyecto sigue una estrategia de evolución por etapas para asegurar la estabilidad operativa del CEDIS Cuautitlán.
-
- Fase 1: General Availability (GA) - Próxima Entrega
-- Persistencia de Datos:** Migración de arreglos temporales a una base de datos **PostgreSQL** para historial de asignaciones.
-- Seguridad Robusta:** Implementación de autenticación **OAuth2** para el acceso de administradores de TI.
-- API REST Completa:** Desarrollo de endpoints para consulta externa de estatus de rampas en tiempo real.
-
- Fase 2: Automatización Física (V2.0)
-- Integración IoT:** Conexión con sensores de presencia físicos en las rampas para detectar la liberación de espacios sin intervención manual.
-- App para Transportistas:** Desarrollo de una aplicación móvil que notifique vía **Push** al chofer su rampa asignada y turno.
-
-Fase 3: Inteligencia Logística (V3.0)
-- Machine Learning Avanzado:** Algoritmos predictivos para estimar horas pico de arribo basándose en el historial de tráfico y clima.
-- Optimización de Rutas Internas:** Asignación de rampas no solo por prioridad, sino por cercanía al área de almacenamiento de la mercancía específica (Secos vs Refrigerados) dentro del CEDIS.
-
