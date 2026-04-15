@@ -7,6 +7,15 @@
 **Arquitectura:** Microservicios en Node.js, validación CI/CD con GitHub Actions y control de versiones mediante GitFlow.
 
 ---
+graph TD
+    A[YMS Walmart API] -->|Datos de Unidades| B(Módulo de Ingesta)
+    B --> C{Motor de Lógica}
+    C -->|Prioridad 1| D[Perecederos]
+    C -->|Prioridad 2| E[Carga Seca]
+    D --> F[Algoritmo de Asignación FIFO]
+    E --> F
+    F --> G[Dashboard de Supervisión]
+    F -->|Update| H[(Base de Datos PostgreSQL)]
 
 ##  Tabla de Contenidos
 1. [Requerimientos](#requerimientos)
