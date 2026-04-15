@@ -62,3 +62,14 @@ La automatización visual se configura en `.github/workflows/main.yml`. Cada vez
 2. Ejecuta `npm install`.
 3. Corre las pruebas de `test/asignacion.test.js`.
 4. Bloquea el **Merge** si las pruebas de prioridad fallan.
+
+
+## 📖 Uso
+
+Este sistema está diseñado para ofrecer interfaces diferenciadas según el rol del usuario dentro del CEDIS Cuautitlán.
+
+### 🏁 Demostración de Interfaz (Consola)
+Para observar el funcionamiento del motor de asignación y el panel de control del administrador, ejecute:
+```bash
+node src/manual_uso.js
+
