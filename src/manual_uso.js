@@ -15,4 +15,3 @@ console.log("\nOrden de Asignación de Rampas:");
 ordenAsignacion.forEach((unidad, index) => {
     console.log(`${index + 1}. ID: ${unidad.id} | Tipo: ${unidad.tipo.toUpperCase()} | Llegada: ${unidad.horaLlegada.toLocaleTimeString()}`);
 });
-
